@@ -1,14 +1,15 @@
 # VATBACK
 
-Welcome to VATBACK – your AI-powered VAT refund automation system.
+Smart, secure, and scalable – VATBACK is a modern initiative built to bridge key gaps in digital workflows.
 
-## 🌍 What is VATBACK?
-A smart platform that connects travelers, merchants, and tax systems using AI and automation.
+> 🚧 This project is currently in its early phase of development. More updates coming soon.
 
-## 🚀 Current Features
-- HTML landing page
-- AI-ready structure
-- GitHub Actions (soon)
+## 🔐 Privacy First
+We prioritize privacy and compliance from the core design. Every feature is built with confidentiality in mind.
 
-## 📌 Author
-Nizar Habbab – Founder of TRBOT & VATBACK.NET
+## ⚙️ Tech Stack
+- HTML (Frontend Prototype)
+- GitHub Actions (Coming soon)
+- API Integrations (Planned)
+
+## 📁 Repository Structure
