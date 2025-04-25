@@ -1,9 +1,8 @@
-<meta name="robots" content="noindex, nofollow">
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VATBACK – Join the AI Revolution</title>
   <style>
@@ -75,19 +74,41 @@
   <h1>🚀 Welcome to VATBACK</h1>
   <p>We're building the future of autonomous tax and AI infrastructure. Be part of the revolution in VAT reclaim automation!</p>
 
-  <form action="https://formspree.io/f/mayvlqqb" method="POST">
+  <form id="contact-form">
     <input type="text" name="name" placeholder="Your Name" required>
     <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" rows="4" placeholder="Your Message or Interest..."></textarea>
+    <textarea name="message" rows="4" placeholder="Your Message or Interest..." required></textarea>
     <button type="submit">Join Now</button>
   </form>
 
   <div class="actions">
     <a href="mailto:info@vatback.net">📩 Contact Us</a>
-    <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=VATBACK+Meeting&dates=20250423T160000Z/20250423T170000Z&details=Let%27s+talk+AI+and+partnerships.&location=https://vatback.net" target="_blank">📅 Book a Meeting</a>
-    <a href="https://formspree.io/f/xjvnvzkl" target="_blank">🤝 Join as Investor</a>
+    <a href="https://calendar.google.com/calendar/appointments/schedules/YOUR_CALENDAR_ID" target="_blank">📅 Book a Meeting</a>
+    <a href="mailto:info@vatback.net?subject=Investment%20Interest">🤝 Join as Investor</a>
   </div>
-<!-- Last updated manually -->
+
+  <script>
+    document.getElementById("contact-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const form = e.target;
+      const data = {
+        name: form.name.value,
+        email: form.email.value,
+        message: form.message.value
+      };
+      
+      fetch("https://script.google.com/macros/s/AKfycbxRIVufGbbcFfrU5XAnpsSBg3LsEBEVe9_nTMhnLOh8lXYP7hxC4Lkn6bRAcIMIvUSA/exec", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+          "Content-Type": "application/json"
+        }
+      }).then(res => {
+        if (res.ok) alert("✅ Message sent successfully!");
+        else alert("❌ Failed to send. Please try again.");
+      });
+    });
+  </script>
 
   <div class="footer">
     © 2025 VATBACK – Powered by AI & NIZAR Technologies.
