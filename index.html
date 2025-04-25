@@ -1,10 +1,16 @@
+<meta name="robots" content="noindex, nofollow">
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="robots" content="noindex, nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VATBACK – Join the AI Revolution</title>
+
+  <!-- Google Calendar Button CSS -->
+  <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+  <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+
   <style>
     body {
       margin: 0;
@@ -70,10 +76,12 @@
     }
   </style>
 </head>
+
 <body>
   <h1>🚀 Welcome to VATBACK</h1>
   <p>We're building the future of autonomous tax and AI infrastructure. Be part of the revolution in VAT reclaim automation!</p>
 
+  <!-- ✅ نموذج المراسلة الذكي -->
   <form id="contact-form">
     <input type="text" name="name" placeholder="Your Name" required>
     <input type="email" name="email" placeholder="Your Email" required>
@@ -81,12 +89,14 @@
     <button type="submit">Join Now</button>
   </form>
 
+  <!-- ✅ روابط الإجراءات -->
   <div class="actions">
     <a href="mailto:info@vatback.net">📩 Contact Us</a>
-    <a href="https://calendar.google.com/calendar/appointments/schedules/YOUR_CALENDAR_ID" target="_blank">📅 Book a Meeting</a>
-    <a href="mailto:info@vatback.net?subject=Investment%20Interest">🤝 Join as Investor</a>
+    <a href="https://calendar.app.google/desjT2d9z1AFXwHo9" target="_blank">📅 Book a Meeting</a>
+    <a href="https://formspree.io/f/xjvnvzkl" target="_blank">🤝 Join as Investor</a>
   </div>
 
+  <!-- ✅ سكربت Google Apps Script لربط الرسائل -->
   <script>
     document.getElementById("contact-form").addEventListener("submit", function(e) {
       e.preventDefault();
@@ -104,10 +114,25 @@
           "Content-Type": "application/json"
         }
       }).then(res => {
-        if (res.ok) alert("✅ Message sent successfully!");
-        else alert("❌ Failed to send. Please try again.");
+        if (res.ok) alert("Message sent successfully!");
+        else alert("Failed to send. Please try again.");
       });
     });
+  </script>
+
+  <!-- ✅ Google Calendar Appointment Button -->
+  <script>
+    (function() {
+      var target = document.currentScript;
+      window.addEventListener('load', function() {
+        calendar.schedulingButton.load({
+          url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1r7P2lVx5SlFG4xQBgSF0T-1R-oBTSuJHKIvCedvOSlmJLSp9oJ0_IJ808mOlBHGupmLlU60Vt?gv=true',
+          color: '#039BE5',
+          label: 'Book an appointment',
+          target,
+        });
+      });
+    })();
   </script>
 
   <div class="footer">
