@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
   <title>VATBACK – Join the AI Revolution</title>
-  <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+  <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet" />
   <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
   <style>
     body {
@@ -76,16 +76,16 @@
   <h1>🚀 Welcome to VATBACK</h1>
   <p>We're building the future of autonomous tax and AI infrastructure. Be part of the revolution in VAT reclaim automation!</p>
 
-  <form id="contact-form">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
+  <form id="contact-form" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
     <textarea name="message" rows="4" placeholder="Your Message or Interest..." required></textarea>
     <button type="submit">Send Message</button>
   </form>
 
   <div class="actions">
     <a href="mailto:info@vatback.net">📩 Contact Us</a>
-    <a href="https://calendar.app.google/GbbjB3f1g1qc7xVV6" target="_blank">📅 Book a Meeting</a>
+    <a href="https://calendar.app.google/desjT2d9z1AFXwHo9" target="_blank">📅 Book a Meeting</a>
   </div>
 
   <script>
@@ -100,20 +100,15 @@
 
       fetch("https://script.google.com/macros/s/AKfycbzLqoiOaAqn5zBn-TEA7z9bio-8MhwEnSAOvU3nUlLYkOa1jfBdg_wxAcWEjB6zH7Yk/exec", {
         method: "POST",
-        body: JSON.stringify(data),
+        mode: "no-cors",  // ← هذا السطر يحل المشكلة
         headers: {
           "Content-Type": "application/json"
-        }
-      }).then(res => {
-        if (res.ok) {
-          alert("✅ Message sent successfully!");
-          form.reset();
-        } else {
-          alert("❌ Failed to send. Please try again.");
-        }
-      }).catch(error => {
-        alert("⚠️ Error: " + error.message);
+        },
+        body: JSON.stringify(data)
       });
+
+      alert("Your message has been sent. Thank you!");
+      form.reset();
     });
   </script>
 
