@@ -21,8 +21,12 @@
       min-height: 100vh;
       padding: 2rem;
     }
+    .logo {
+      max-width: 160px;
+      margin-bottom: 1.5rem;
+    }
     h1 {
-      font-size: 2.8rem;
+      font-size: 2.5rem;
       margin-bottom: 0.5rem;
     }
     p {
@@ -73,7 +77,11 @@
   </style>
 </head>
 <body>
-  <h1>🚀 Welcome to VATBACK</h1>
+
+  <!-- شعار TRBOT -->
+  <img src="trbot-transparent-logo.png" alt="TRBOT Logo" class="logo">
+
+  <h1>Welcome to VATBACK</h1>
   <p>We're building the future of autonomous tax and AI infrastructure. Be part of the revolution in VAT reclaim automation!</p>
 
   <form id="contact-form" method="POST">
@@ -100,7 +108,7 @@
 
       fetch("https://script.google.com/macros/s/AKfycbzLqoiOaAqn5zBn-TEA7z9bio-8MhwEnSAOvU3nUlLYkOa1jfBdg_wxAcWEjB6zH7Yk/exec", {
         method: "POST",
-        mode: "no-cors",  // ← هذا السطر يحل المشكلة
+        mode: "no-cors",
         headers: {
           "Content-Type": "application/json"
         },
@@ -113,7 +121,9 @@
   </script>
 
   <div class="footer">
-    © 2025 VATBACK™, proudly operated under TRBOT Technologies LLC – Powered by AI & NIZAR
+    © 2025 VATBACK™, proudly operated under TRBOT Technologies LLC – Powered by AI & NIZAR<br>
+    Registered in the United States of America
   </div>
+
 </body>
 </html>
