@@ -50,9 +50,10 @@
       padding: 1.5rem;
       border-radius: 12px;
       box-shadow: 0 0 10px rgba(0,0,0,0.3);
-      max-width: 400px;
+      max-width: 420px;
       width: 100%;
       margin-bottom: 1.5rem;
+      box-sizing: border-box;
     }
 
     input, textarea {
@@ -64,6 +65,7 @@
       font-size: 1rem;
       background-color: #374151;
       color: #f9fafb;
+      box-sizing: border-box;
     }
 
     input::placeholder, textarea::placeholder {
@@ -79,6 +81,7 @@
       border-radius: 6px;
       cursor: pointer;
       transition: background-color 0.3s;
+      width: 100%;
     }
 
     button:hover {
@@ -116,6 +119,10 @@
       .actions a {
         display: block;
         margin: 0.5rem 0;
+      }
+
+      button {
+        width: 100%;
       }
     }
   </style>
